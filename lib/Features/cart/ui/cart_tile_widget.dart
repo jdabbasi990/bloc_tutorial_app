@@ -1,12 +1,13 @@
+import 'package:bloc_tutorial_app/Features/cart/bloc/cart_bloc_bloc.dart';
 import 'package:bloc_tutorial_app/Features/home/bloc/home_bloc_bloc.dart';
 import 'package:bloc_tutorial_app/Features/home/models/home_product_data_model.dart';
 import 'package:flutter/material.dart';
 
-class ProductTileWidget extends StatelessWidget {
+class CartTileWidget extends StatelessWidget {
   final ProductDataModel productDataModel;
-  final HomeBlocBloc homeBloc;
-  const ProductTileWidget(
-      {super.key, required this.productDataModel, required this.homeBloc});
+  final CartBlocBloc cartBloc;
+  const CartTileWidget(
+      {super.key, required this.productDataModel, required this.cartBloc});
 
   @override
   Widget build(BuildContext context) {
@@ -49,9 +50,9 @@ class ProductTileWidget extends StatelessWidget {
                 children: [
                   IconButton(
                       onPressed: () {
-                        homeBloc.add(HomeProductWishlistButtonClickedEvent(
-                          clickedProduct: productDataModel,
-                        ));
+                        // cartBloc.add(HomeProductWishlistButtonClickedEvent(
+                        //   clickedProduct: productDataModel,
+                        // ));
                         //   homeBloc.add(HomeWishlistButtonNavigateEvent());
                       },
                       icon: const Icon(
@@ -59,9 +60,9 @@ class ProductTileWidget extends StatelessWidget {
                       )),
                   IconButton(
                       onPressed: () {
-                        homeBloc.add(HomeProductCartButtonClickedEvent(
-                          clickedProduct: productDataModel,
-                        ));
+                        // cartBloc.add(HomeProductCartButtonClickedEvent(
+                        //   clickedProduct: productDataModel,
+                        // ));
                         // homeBloc.add(HomeCartButtonNavigateEvent());
                       },
                       icon: const Icon(
