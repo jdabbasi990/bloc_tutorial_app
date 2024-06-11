@@ -26,13 +26,17 @@ class _HomeState extends State<Home> {
             backgroundColor: Colors.blue,
             actions: [
               IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    homeBloc.add(HomeWishlistButtonNavigateEvent());
+                  },
                   icon: Icon(
                     Icons.favorite_border,
                     color: Colors.white,
                   )),
               IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    homeBloc.add(HomeCartButtonNavigateEvent());
+                  },
                   icon: Icon(
                     Icons.shopping_cart_checkout_outlined,
                     color: Colors.white,
